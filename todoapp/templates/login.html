@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Create Account</title>
+    <title>Login</title>
     <link href="../static/css/styles.css" type="text/css" rel="stylesheet">
 
     <!--the rounded input box stuff-->
@@ -18,57 +18,38 @@
   <body>
 
   <div class="header">
-    <p align="right"><a href="/logout" class="button button3">Logout</button></a></p>
     <h1>To Do</h1>
-
   </div>
 
 
-  <!--
-    lists
-  -->
-  <p align="center"><button onclick="showContent()">Add To-Do</button></a></p>
-
-  <template>
-    <div class="container">
-      <div class="left">
-
-      <form class="pure-form">
-
-        <input
-                type="text"
-                class="pure-input-rounded"
-                type="text"
-                name="inputBox"
-                placeholder="Course"
-                style="height:40px;font-size:14pt;">
+  <div class="container">
+    <div class="center">
+    <form class="pure-form">
 
       <input
-        type="text"
-        class="pure-input-rounded"
-        type="text"
-        name="inputBox"
-        placeholder="ASMT"
-        style="height:40px;font-size:14pt;">
-        <div style="height:2px;"><br></div>
+              type="text"
+              class="pure-input-rounded"
+              type="text"
+              name="inputBox"
+              placeholder="Username"
+              style="height:40px;font-size:14pt;">
+    <div style="height:2px;"><br></div>
 
+      <input
+              type="password"
+              class="pure-input-rounded"
+              type="text"
+              name="inputBox"
+              placeholder="Password"
+              style="height:40px;font-size:14pt;display: inline;">
+    </form>
 
-      <div style="height:2px;"><br></div>
-      <input type="date" id="start" name="trip-start"
-      value=today
-      min="today" max=2050-12-31>
-      </form>
-  </template>
+    <p align="right"><a href="{{ url_for('create_account')}}">Create Account</a></p>
+    <p align="right"><a href="{{ url_for('todo')}}">todo</a></p>
+    <center><a href="LOGIN!" class="button button3">Login</button></a></center>
 
-  <script>
-    function showContent() {
-      var temp = document.getElementsByTagName("template")[0];
-      var clon = temp.content.cloneNode(true);
-      document.body.appendChild(clon);
-    }
-    </script>
+    </div>
+  </div>
 
   </body>
 </html>
-
-<button class="button button5"></button>
