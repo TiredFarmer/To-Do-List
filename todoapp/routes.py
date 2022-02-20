@@ -1,14 +1,6 @@
-'''
-Date: 2022-02-19
-
-'''
-from flask import Flask, request, render_template, redirect
-from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
-import re
-
-app = Flask(__name__)
-app.secret_key = 'super secret'
+from flask import request, render_template
+from todoapp import app
+from todoapp.models import User, Assignment
 
 
 @app.route("/create_account")
@@ -63,7 +55,3 @@ def todo_add():
     asmt = request.form['ASMT']
     date = request.form['Date']
     print(course, asmt, date)
-
-
-if __name__ == "__main__":
-    app.run()
