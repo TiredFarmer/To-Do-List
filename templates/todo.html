@@ -18,11 +18,57 @@
   <body>
 
   <div class="header">
+    <p align="right"><a href="/logout" class="button button3">Logout</button></a></p>
     <h1>To Do</h1>
+
   </div>
 
 
+  <!--
+    lists
+  -->
+  <p align="center"><button onclick="showContent()">Add To-Do</button></a></p>
+  
+  <template>
+    <div class="container">
+      <div class="left">
+  
+      <form class="pure-form">
+  
+        <input
+                type="text"
+                class="pure-input-rounded"
+                type="text"
+                name="inputBox"
+                placeholder="Course"
+                style="height:40px;font-size:14pt;">
+  
+      <input 
+        type="text"
+        class="pure-input-rounded"
+        type="text"
+        name="inputBox"
+        placeholder="ASMT"
+        style="height:40px;font-size:14pt;">   
+        <div style="height:2px;"><br></div>
+  
+
+      <div style="height:2px;"><br></div>
+      <input type="date" id="start" name="trip-start"
+      value=today
+      min="today" max=2050-12-31>
+      </form>
+  </template>
+  
+  <script>
+    function showContent() {
+      var temp = document.getElementsByTagName("template")[0];
+      var clon = temp.content.cloneNode(true);
+      document.body.appendChild(clon);
+    }
+    </script>
 
   </body>
 </html>
 
+<button class="button button5"></button>

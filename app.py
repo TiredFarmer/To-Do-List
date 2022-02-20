@@ -31,6 +31,10 @@ def home():
     return render_template("login.html")
 
 
+@app.route('/logout')
+def logout():
+    return redirect('/')
+
 @app.route("/", methods=["POST"])
 def account_creation():
     text = request.form['text']
