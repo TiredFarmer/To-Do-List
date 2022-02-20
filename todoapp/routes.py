@@ -1,10 +1,15 @@
 from flask import request, render_template, redirect
 from todoapp import app
-from todoapp.models import User, Assignment
+from todoapp.models import add_user, auth_user
+
+
+@app.route("/")
+def home():
+    return render_template("login.html")
 
 
 @app.route("/create_account")
-def create_account():
+def create_account_page():
     return render_template("create_account.html")
 
 
@@ -13,44 +18,31 @@ def todo():
     return render_template("todo.html")
 
 
-'''
-#account creation 
-# '''
+@app.route("/create_account", methods=["POST"])
+def account_creation():
+    username = request.form['username']
+    password = request.form['password']
 
+    print(username, password)
 
-@app.route("/")
-def home():
-    return render_template("login.html")
-
-@app.route('/logout')
-def logout():
-    return redirect('/')
+    if add_user(username, password):
+        return render_template("account_creation_success.html")
+    else:
+        return render_template("username_already_taken.html")
 
 
 @app.route("/", methods=["POST"])
-def account_creation():
-    text = request.form['text']
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    print(username, password)
 
-    ''' back end
-    if account_creation(processed_text):
+    if auth_user(username, password):
+        print("authenticated")
         return render_template("todo.html")
-    '''
-
-    if text == "your mom":
-        return render_template("login.html")
-    if text == "todo":
-        return render_template("todo.html")
-    return render_template("create_account.html")
-
-
-@app.route("/login.html", methods=["POST"])
-def login_attempt():
-    text = request.form['text']
-    '''back end
-    if login(processed_text)
-        return render_template("todo.html)
-    '''
-    return render_template("login.html")
+    else:
+        print("bad pass")
+        return render_template("invalid_login.html")
 
 
 @app.route("/todo", methods=["POST"])

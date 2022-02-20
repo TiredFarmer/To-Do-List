@@ -21,3 +21,24 @@ class Assignment(db.Model):
 
     def __repr__(self):
         return f"Assignment(\"{self.name}\", \"{self.course}\", \"{self.due_date}\", \"{self.due_time}\")"
+
+
+def add_user(username: str, password: str) -> bool:
+    for user in User.query.all():
+        if user.username == username:
+            return False
+        elif password == "":
+            return False
+
+    db.session.add(User(username=username, password=password))
+    db.session.commit()
+    return True
+
+
+def auth_user(username: str, password: str) -> bool:
+    for user in User.query.all():
+        if user.username == username:
+            if user.password == password:
+                return True
+
+    return False

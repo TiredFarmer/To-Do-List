@@ -24,29 +24,27 @@
 
   <div class="container">
     <div class="center">
-    <form class="pure-form">
+    <form class="pure-form" method="post">
 
       <input
               type="text"
               class="pure-input-rounded"
-              type="text"
-              name="inputBox"
+              name="username"
               placeholder="Username"
               style="height:40px;font-size:14pt;">
+
     <div style="height:2px;"><br></div>
 
       <input
               type="password"
               class="pure-input-rounded"
-              type="text"
-              name="inputBox"
+              name="password"
               placeholder="Password"
-              style="height:40px;font-size:14pt;display: inline;">
+              style="height:40px;font-size:14pt;">
+      <div style="height:2px;"><br></div>
+          <p align="right"><a href="{{ url_for('create_account_page')}}">Create Account</a></p>
+      <center><input class="button button3" type="submit" value="Login"></center>
     </form>
-
-    <p align="right"><a href="{{ url_for('create_account')}}">Create Account</a></p>
-    <p align="right"><a href="{{ url_for('todo')}}">todo</a></p>
-    <center><a href="LOGIN!" class="button button3">Login</button></a></center>
 
     </div>
   </div>
