@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Create Account</title>
+    <title>Login</title>
     <link href="../static/css/styles.css" type="text/css" rel="stylesheet">
 
     <!--the rounded input box stuff-->
@@ -22,7 +22,34 @@
   </div>
 
 
+  <div class="container">
+    <div class="center">
+    <form class="pure-form">
+
+      <input
+              type="text"
+              class="pure-input-rounded"
+              type="text"
+              name="inputBox"
+              placeholder="Username"
+              style="height:40px;font-size:14pt;">
+    <div style="height:2px;"><br></div>
+
+      <input
+              type="password"
+              class="pure-input-rounded"
+              type="text"
+              name="inputBox"
+              placeholder="Password"
+              style="height:40px;font-size:14pt;display: inline;">
+    </form>
+
+    <p align="right"><a href="{{ url_for('create_account')}}">Create Account</a></p>
+    <p align="right"><a href="{{ url_for('todo')}}">todo</a></p>
+    <center><a href="LOGIN!" class="button button3">Login</button></a></center>
+
+    </div>
+  </div>
 
   </body>
 </html>
-
