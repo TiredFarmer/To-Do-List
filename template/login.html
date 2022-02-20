@@ -1,47 +1,56 @@
-<form method="POST">
-    <input name="text">
-    <input type="submit">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link href="../static/css/styles.css" type="text/css" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-Do List</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <script src="https://kit.fontawesome.com/ae3b8f831c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/demo.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/component.css') }}" />
+    <!--the rounded input box stuff-->
+    <meta charset="utf-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=
+    "https://unpkg.com/purecss@2.0.5/build/pure-min.css"
+        integrity=
+    "sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd"
+        crossorigin="anonymous">
 
-    <script>(function (e, t, n) { var r = e.querySelectorAll("html")[0]; r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2") })(document, window, 0);</script>
-</head>
+  </head>
+  <body>
 
+  <center>
+    <h1>To Do</h1>
+  </center>
 
-<body>
-    <div class="container">
-        <header class="codrops-header">
+  <style>
+  .container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+  </style>
 
-            <h1>To-Do List</h1>
+  <div class="container">
+    <div class="center">
 
-            <div class="steps-card">
-                <p><strong>1.</strong> 1</p>
-            </div>
-            <div class="steps-card">
-                <p><strong>2.</strong> 2</p>
-            </div>
-            <div class="steps-card">
-                <p><strong>3.</strong> 3</p>
-            </div>
-
-        </header>
-        <div class="content">
-            <footer>Made by Bob <a href="google.com"
-                target="none">2</a>
-        </footer>
+    <form class="pure-form">
+      <input
+              type="text"
+              class="pure-input-rounded"
+              type="text"
+              name="inputBox"
+              placeholder="Username"
+              style="height:40px;font-size:14pt;display: inline;"
+    </form>
+<!--    <input type="submit" value="Login">-->
+    <button class="button button3">Login</button>
+    <p align="left"><a href="url">Create Account</a></p>
 
     </div>
+  </div>
 
+  </body>
+</html>
 
-</div>
-<script>
