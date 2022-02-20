@@ -18,11 +18,11 @@
   <body>
 
   <div class="header">
-    <p align="right"><a href="/" class="button button3">Logout</button></a></p>
+
     <h1>To Do</h1>
 
   </div>
-
+  <p align="right"><a href="/" class="button button3">Logout</button></a></p>
 
   <!--
     lists
@@ -34,29 +34,58 @@
       <div class="left">
 
       <form class="pure-form">
-
-        <input
-                type="text"
-                class="pure-input-rounded"
-                type="text"
-                name="inputBox"
-                placeholder="Course"
-                style="height:40px;font-size:14pt;">
+      <input
+        type="text"
+        class="pure-input-rounded"
+        name="username"
+        placeholder="Username"
+        style="height:40px;font-size:14pt;">
+        <div style="height:2px;"><br></div>
 
       <input
         type="text"
         class="pure-input-rounded"
         type="text"
-        name="inputBox"
-        placeholder="ASMT"
+        name="Course"
+        placeholder="Course"
+        style="height:40px;font-size:14pt;">
+    <div style="height:2px;"><br></div>
+
+      <input
+        type="text"
+        class="pure-input-rounded"
+        type="text"
+        name="Assignment"
+        placeholder="Assignment"
+        style="height:40px;font-size:14pt;">
+      <div style="height:2px;"><br></div>
+
+      <input
+        type="text"
+        class="pure-input-rounded"
+        type="text"
+        name="Date"
+        placeholder="Date"
+        style="height:40px;font-size:14pt;">
+        <div style="height:2px;"><br></div>
+
+        <input
+        type="text"
+        class="pure-input-rounded"
+        type="text"
+        name="Time"
+        placeholder="Time"
         style="height:40px;font-size:14pt;">
         <div style="height:2px;"><br></div>
 
 
-      <div style="height:2px;"><br></div>
-      <input type="date" id="start" name="trip-start"
+      <!-- <input type="date" id="start" name="trip-start"
       value=today
-      min="today" max=2050-12-31>
+      min="today" max=2050-12-31> -->
+
+
+
+      <div style="height:2px;"><br></div>
       </form>
   </template>
 
@@ -70,5 +99,3 @@
 
   </body>
 </html>
-
-<button class="button button5"></button>

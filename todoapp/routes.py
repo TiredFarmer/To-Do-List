@@ -44,6 +44,8 @@ def login():
         print("bad pass")
         return render_template("invalid_login.html")
 
+    print(current_user)
+
 
 @app.route("/todo", methods=["POST"])
 def todo_add():
