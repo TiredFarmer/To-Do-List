@@ -5,6 +5,14 @@ h1 {
   color: black;
 }
 
+.header {
+  padding: 0.001%;
+  text-align: center;
+  background: #368cca;
+  color: white;
+  font-size: 24px;
+}
+
 .container {
     position: absolute;
     top: 45%;
