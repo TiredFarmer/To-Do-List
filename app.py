@@ -3,6 +3,7 @@ Date: 2022-02-19
 
 '''
 from flask import Flask, request, render_template, redirect
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import re
 
@@ -10,9 +11,9 @@ app = Flask(__name__)
 app.secret_key = 'super secret'
 
 
-@app.route("/login")
-def login():
-    return render_template("login.html")
+@app.route("/create_account")
+def create_account():
+    return render_template("create_account.html")
 
 
 @app.route("/todo")
@@ -27,7 +28,7 @@ def todo():
 
 @app.route("/")
 def home():
-    return render_template("create_account.html")
+    return render_template("login.html")
 
 
 @app.route("/", methods=["POST"])
@@ -35,7 +36,7 @@ def account_creation():
     text = request.form['text']
 
     ''' back end
-    if account_creation(proccessed_text):
+    if account_creation(processed_text):
         return render_template("todo.html")
     '''
 
@@ -64,4 +65,5 @@ def todo_add():
     print(course, asmt, date)
 
 
-
+if __name__ == "__main__":
+    app.run()
