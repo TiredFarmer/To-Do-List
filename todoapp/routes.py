@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import request, render_template, redirect
 from todoapp import app
 from todoapp.models import User, Assignment
 
@@ -21,6 +21,10 @@ def todo():
 @app.route("/")
 def home():
     return render_template("login.html")
+
+@app.route('/logout')
+def logout():
+    return redirect('/')
 
 
 @app.route("/", methods=["POST"])
